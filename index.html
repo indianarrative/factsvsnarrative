@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -26,31 +27,30 @@
 
     nav{
       background:#001f3f;
-      padding:0 30px;
       position:sticky;
       top:0;
       z-index:1000;
     }
 
     .menu{
-      display:flex;
       list-style:none;
-      align-items:center;
+      display:flex;
+      flex-wrap:wrap;
     }
 
     .menu li{
       position:relative;
     }
 
-    .menu > li > a{
+    .menu li a{
       display:block;
-      color:white;
       padding:18px 22px;
+      color:white;
       text-decoration:none;
       font-weight:bold;
     }
 
-    .menu > li > a:hover{
+    .menu li a:hover{
       background:#003366;
     }
 
@@ -60,6 +60,278 @@
       display:none;
       position:absolute;
       background:white;
-      min-width:250px;
-      top:55px;
+      min-width:240px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.15);
+      top:58px;
+      left:0;
+      z-index:1000;
+    }
+
+    .dropdown a{
+      color:#222 !important;
+      padding:14px 18px;
+      border-bottom:1px solid #eeeeee;
+    }
+
+    .dropdown a:hover{
+      background:#f1f1f1;
+    }
+
+    .menu li:hover .dropdown{
+      display:block;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      background:#002244;
+      color:white;
+      padding:120px 60px;
+      text-align:left;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:22px;
+      max-width:750px;
+      color:#dddddd;
+    }
+
+    /* MAIN CONTENT */
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+      padding:60px 0;
+    }
+
+    .section{
+      margin-bottom:70px;
+    }
+
+    .section h2{
+      font-size:36px;
+      color:#003366;
+      margin-bottom:25px;
+    }
+
+    .section p{
+      font-size:18px;
+      color:#444;
+      margin-bottom:18px;
+    }
+
+    /* INFOGRAPHIC CARDS */
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      text-align:center;
+    }
+
+    .card h3{
+      color:#003366;
+      margin-bottom:15px;
+    }
+
+    .card p{
+      color:#555;
+      font-size:17px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#001f3f;
+      color:white;
+      text-align:center;
+      padding:30px;
+      margin-top:50px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .menu{
+        flex-direction:column;
+      }
+
+      .dropdown{
+        position:static;
+        width:100%;
+      }
+
+      .hero{
+        padding:80px 25px;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <ul class="menu">
+
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+
+      <li>
+
+        <a href="#">Internal Security</a>
+
+        <div class="dropdown">
+          <a href="naxalism.html">Naxalism</a>
+          <a href="terrorism.html">Terrorism Reports</a>
+          <a href="border-security.html">Border Security</a>
+        </div>
+
+      </li>
+
+      <li>
+
+        <a href="#">Economy & Agriculture</a>
+
+        <div class="dropdown">
+          <a href="msp.html">MSP Analysis</a>
+          <a href="inflation.html">Inflation</a>
+          <a href="employment.html">Employment</a>
+        </div>
+
+      </li>
+
+      <li>
+
+        <a href="#">Governance</a>
+
+        <div class="dropdown">
+          <a href="education.html">Education Policy</a>
+          <a href="healthcare.html">Healthcare</a>
+          <a href="infrastructure.html">Infrastructure</a>
+        </div>
+
+      </li>
+
+      <li>
+
+        <a href="#">Reports & Data</a>
+
+        <div class="dropdown">
+          <a href="government-data.html">Government Data</a>
+          <a href="comparative-studies.html">Comparative Studies</a>
+          <a href="research-reports.html">Research Reports</a>
+        </div>
+
+      </li>
+
+    </ul>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>Facts Vs Narrative</h1>
+
+    <p>
+      Independent research and evidence-based analysis platform focused on governance, economy, internal security, public policy, and national development.
+    </p>
+
+  </section>
+
+
+  <!-- CONTENT -->
+
+  <div class="container">
+
+    <section class="section">
+
+      <h2>About The Platform</h2>
+
+      <p>
+        Facts Vs Narrative is a research-oriented platform dedicated to examining public issues through data, official records, historical context, policy analysis, and comparative studies.
+      </p>
+
+      <p>
+        The objective is to create structured, evidence-based research content on topics including internal security, governance, economy, agriculture, education, infrastructure, and public policy.
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>India At A Glance</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Population</h3>
+          <p>1.4+ Billion Citizens</p>
+        </div>
+
+        <div class="card">
+          <h3>States & UTs</h3>
+          <p>28 States and 8 Union Territories</p>
+        </div>
+
+        <div class="card">
+          <h3>Research Areas</h3>
+          <p>Economy, Security, Governance, Policy, Infrastructure</p>
+        </div>
+
+        <div class="card">
+          <h3>Focus</h3>
+          <p>Evidence-based and data-driven analysis</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026 Facts Vs Narrative | Independent Research & Analysis Platform
+
+  </footer>
+
+</body>
+
 </html>
