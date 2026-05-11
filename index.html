@@ -9,213 +9,57 @@
 
   <style>
 
-    body{
+    *{
       margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
       font-family:Arial, sans-serif;
-      background:#f4f4f4;
+      background:#f4f6f9;
       color:#222;
       line-height:1.6;
     }
 
-    header{
-      background:#002244;
-      color:white;
-      padding:30px 20px;
-      text-align:center;
+    /* NAVBAR */
+
+    nav{
+      background:#001f3f;
+      padding:0 30px;
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
 
-    header h1{
-      margin:0;
-      font-size:40px;
-    }
-
-    header p{
-      margin-top:10px;
-      font-size:18px;
-      color:#d0d0d0;
-    }
-
-    .container{
-      width:90%;
-      max-width:1100px;
-      margin:auto;
-      padding:30px 0;
-    }
-
-    .category{
-      background:white;
-      margin-bottom:30px;
-      padding:25px;
-      border-radius:10px;
-      box-shadow:0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .category h2{
-      margin-top:0;
-      color:#003366;
-      border-bottom:2px solid #eeeeee;
-      padding-bottom:10px;
-    }
-
-    ul{
+    .menu{
+      display:flex;
       list-style:none;
-      padding:0;
+      align-items:center;
     }
 
-    li{
-      margin:12px 0;
+    .menu li{
+      position:relative;
     }
 
-    a{
-      text-decoration:none;
-      color:#0056b3;
-      font-size:18px;
-    }
-
-    a:hover{
-      color:#000;
-    }
-
-    footer{
-      text-align:center;
-      padding:25px;
-      background:#002244;
+    .menu > li > a{
+      display:block;
       color:white;
-      margin-top:40px;
+      padding:18px 22px;
+      text-decoration:none;
+      font-weight:bold;
     }
 
-  </style>
+    .menu > li > a:hover{
+      background:#003366;
+    }
 
-</head>
+    /* DROPDOWN */
 
-<body>
-
-<header>
-
-  <h1>Facts Vs Narrative</h1>
-
-  <p>
-    Research-based analysis through evidence, data, historical context, and public records.
-  </p>
-
-</header>
-
-<div class="container">
-
-  <div class="category">
-
-    <h2>Internal Security</h2>
-
-    <ul>
-      <li>
-        <a href="naxalism.html">
-          Naxalism Analysis
-        </a>
-      </li>
-
-      <li>
-        <a href="terrorism.html">
-          Terrorism Reports
-        </a>
-      </li>
-
-      <li>
-        <a href="border-security.html">
-          Border Security
-        </a>
-      </li>
-    </ul>
-
-  </div>
-
-
-  <div class="category">
-
-    <h2>Economy & Agriculture</h2>
-
-    <ul>
-      <li>
-        <a href="msp.html">
-          MSP Analysis
-        </a>
-      </li>
-
-      <li>
-        <a href="inflation.html">
-          Inflation & Cost of Living
-        </a>
-      </li>
-
-      <li>
-        <a href="employment.html">
-          Employment & Jobs
-        </a>
-      </li>
-    </ul>
-
-  </div>
-
-
-  <div class="category">
-
-    <h2>Governance & Policy</h2>
-
-    <ul>
-      <li>
-        <a href="education.html">
-          Education Policy
-        </a>
-      </li>
-
-      <li>
-        <a href="healthcare.html">
-          Healthcare Analysis
-        </a>
-      </li>
-
-      <li>
-        <a href="infrastructure.html">
-          Infrastructure Development
-        </a>
-      </li>
-    </ul>
-
-  </div>
-
-
-  <div class="category">
-
-    <h2>Data & Reports</h2>
-
-    <ul>
-      <li>
-        <a href="government-data.html">
-          Government Data
-        </a>
-      </li>
-
-      <li>
-        <a href="comparative-studies.html">
-          Comparative Studies
-        </a>
-      </li>
-
-      <li>
-        <a href="research-reports.html">
-          Research Reports
-        </a>
-      </li>
-    </ul>
-
-  </div>
-
-</div>
-
-<footer>
-
-  © 2026 Facts Vs Narrative | Independent Research & Analysis Platform
-
-</footer>
-
-</body>
+    .dropdown{
+      display:none;
+      position:absolute;
+      background:white;
+      min-width:250px;
+      top:55px;
 </html>
